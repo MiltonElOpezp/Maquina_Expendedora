@@ -20,23 +20,13 @@ class Producto: #Esta clase sirve para crear los productos que van a estar en la
         pass
     
     def comprar(self):
-        """
-        Realiza la compra del producto (reduce el stock en 1)
-        
-        Returns:
-            bool: True si la compra fue exitosa, False si no hay stock
-        """
-        # TODO: Verificar si hay stock y reducir la cantidad en 1
-        # TODO: Retornar True si se pudo comprar, False caso contrario
-        # Ejemplo:
-        # if self.cantidad > 0:
-        #     self.cantidad = self.cantidad - 1  # También puedes usar: self.cantidad -= 1
-        #     return True
-        # else:
-        #     return False
-        #
-        # Si había 5 productos, después de comprar quedarán 4
+        if self.cantidad > 0: #Si la cantidad es mayor a 0
+            self.cantidad -= 1 #Se le resta uno a la cantidad
+            return True #Devuelve un verdadero
+        else:
+            return False #Devuelve un falso ya que no hay stock disponible
         pass
+
     
     def reponer_stock(self, cantidad):
         """
