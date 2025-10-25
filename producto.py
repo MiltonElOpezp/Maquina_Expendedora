@@ -13,19 +13,10 @@ class Producto: #Esta clase sirve para crear los productos que van a estar en la
     pass 
 
     
-    def tiene_stock(self):
-        """
-        Verifica si el producto tiene stock disponible
-        
-        Returns:
-            bool: True si hay stock (cantidad > 0), False caso contrario
-        """
-        # TODO: Implementar la lógica para verificar si hay stock
-        # Ejemplo:
-        # return self.cantidad > 0
-        # 
-        # Si self.cantidad es 5, retorna True
-        # Si self.cantidad es 0, retorna False
+    def tiene_stock(self): 
+      
+        return self.cantidad > 0 #Esto sirve para verificar si aun hay stock de los productos
+        #Si el producto si existe devuelde un verdadero o de caso contrario devuelve un falso (esto sirve para la toma de deciciones)
         pass
     
     def comprar(self):
