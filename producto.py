@@ -3,24 +3,15 @@ Módulo para la clase Producto
 Representa un producto individual de la máquina expendedora
 """
 
-class Producto:
-    def __init__(self, codigo, nombre, precio, cantidad):
-        """
-        Inicializa un producto
-        
-        Args:
-            codigo (str): Código único del producto (ej: "A1", "B2")
-            nombre (str): Nombre del producto (ej: "Coca Cola", "Papas")
-            precio (float): Precio del producto
-            cantidad (int): Cantidad disponible en stock
-        """
-        # TODO: Asignar los parámetros a los atributos de la clase
-        # Ejemplo:
-        # self.codigo = codigo
-        # self.nombre = nombre
-        # self.precio = precio
-        # self.cantidad = cantidad
-        pass
+class Producto: #Esta clase sirve para crear los productos que van a estar en la maquina expendedora
+    def __init__(self, codigo, nombre, precio, cantidad): #Esta es una funcion que le da parametros a cada producto es decir lo que debe de tener cada producto
+        self.codigo = codigo
+        self.nombre = nombre
+        self.precio = precio
+        self.cantidad = cantidad 
+        #Self sirve para referirse a la misma clase o al mismo objeto en el lenguaje de c# se usa this.
+    pass 
+
     
     def tiene_stock(self):
         """
