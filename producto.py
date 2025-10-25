@@ -26,8 +26,8 @@ class Producto: #Esta clase sirve para crear los productos que van a estar en la
         else:
             return False #Devuelve un falso ya que no hay stock disponible
         pass
-
-    
+            #Codigo Descartado
+    ##################################################################
     def reponer_stock(self, cantidad):
         """
         Repone el stock del producto
@@ -41,20 +41,9 @@ class Producto: #Esta clase sirve para crear los productos que van a estar en la
         #
         # Si tenías 3 productos y repones 10, quedarás con 13 productos
         pass
-    
+    #################################################################################
     def __str__(self):
-        """
-        Representación en string del producto para mostrar en pantalla
-        
-        Returns:
-            str: Información formateada del producto
-        """
-        # TODO: Retornar una cadena con formato:
-        # "[CODIGO] NOMBRE - $PRECIO (Stock: CANTIDAD)"
-        # Ejemplo: "[A1] Coca Cola - $1.50 (Stock: 10)"
-        # 
-        # Ejemplo de implementación:
-        # return f"[{self.codigo}] {self.nombre} - ${self.precio:.2f} (Stock: {self.cantidad})"
-        # 
-        # El :.2f hace que el precio siempre muestre 2 decimales (ej: 1.50 en vez de 1.5)
+       def __str__(self):  
+        return f"[{self.codigo}] {self.nombre} - ${self.precio:.2f} (Stock: {self.cantidad})" #Sirve para mostrar en pantalla los productos con su codigo, nombre, precio y cantidad
+         # Ejemplo: "[A1] Coca Cola - $1.50 (Stock: 10)"
         pass
