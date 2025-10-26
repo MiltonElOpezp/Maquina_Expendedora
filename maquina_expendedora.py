@@ -175,8 +175,7 @@ class MaquinaExpendedora:
         #     self.dinero_insertado = 0
         #     return True
         pass
-    #Codigo Descartado
-   ################################################################################################# 
+
     def devolver_dinero(self):
       #Esta funcion permite regresarle el dinero al usuario en caso de cancelar la compra
         Dinero_devuelto = self.dinero_insertado
@@ -187,7 +186,8 @@ class MaquinaExpendedora:
             print("No es necesario dar cambio")
             
         pass
-    
+        #Codigo Descartado
+   ################################################################################################# 
     def modo_administrador(self):
         """
         Modo especial para administrar la máquina (reponer stock, ver inventario completo)
