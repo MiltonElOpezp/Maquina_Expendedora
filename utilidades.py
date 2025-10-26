@@ -103,7 +103,7 @@ def mostar_titulo():
    #= ╔, ║, ╚, ╝,╗: caracter para decorar (fueron buscacados en internet)
 
     print("╔" + "═" * 38 + "╗")
-    print("║     MÁQUINA EXPENDEDORA    ║")
+    print("║     MÁQUINA EXPENDEDORA DE MAQUILLAJE    ║")
     print("║      ¡Bienvenido!          ║")
     print("╚" + " " * 38 + "╝")
     
