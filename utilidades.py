@@ -1,7 +1,7 @@
 
 #Módulo de utilidades para validación y formato
 #Funciones auxiliares para la máquina expendedora
-
+##################################################################################################
 def validar_numero_positivo(entrada):
 
  ## Valida que la entrada sea un número positivo y si no lo es, retorna False
@@ -53,7 +53,7 @@ def validar_codigo_producto(codigo):
     # validar_codigo_producto("B2") → True
     # validar_codigo_producto("1A") → False
     # validar_codigo_producto("AB") → False
-    
+
 ############################################################################################################
 def formatear_precio(precio):
     """
