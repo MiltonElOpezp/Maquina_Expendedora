@@ -4,35 +4,19 @@ Funciones auxiliares para la máquina expendedora
 """
 
 def validar_numero_positivo(entrada):
-    """
-    Valida que una entrada sea un número positivo
+
+## Valida que la entrada sea un número positivo y si no lo es, retorna False
     
-    Args:
-        entrada (str): Entrada del usuario a validar
-        
-    Returns:
-        tuple: (es_valido, numero) donde es_valido es bool y numero es float o None
-    """
-    # TODO: Intentar convertir la entrada a float
-    # TODO: Verificar que el número sea positivo
-    # TODO: Retornar (True, numero) si es válido, (False, None) si no es válido
-    # TODO: Manejar excepciones si la conversión falla
-    # 
-    # Ejemplo de implementación:
-    # try:
-    #     numero = float(entrada)
-    #     if numero > 0:
-    #         return (True, numero)
-    #     else:
-    #         return (False, None)
-    # except ValueError:
-    #     return (False, None)
-    # 
-    # Ejemplos de uso:
-    # validar_numero_positivo("2.50") → (True, 2.50)
-    # validar_numero_positivo("-1") → (False, None) 
-    # validar_numero_positivo("abc") → (False, None)
-    pass
+    try:
+        numero = float(entrada) # Convierte la entrada a float
+        if numero > 0: # Verifica si el número es positivo, ejemplo: 1, 2.5, etc.
+            return (True, numero) # True: indica que es válido, Numero: el valor numerico convertido
+        else:
+            return (False, None) # No es positivo, ejjemplo: 0, -3, etc.
+    except ValueError:
+        return (False, None) # No es un número válido o no hay numero, ejemplo: "abc", etc.
+    
+##########################################################################################################
 
 def validar_codigo_producto(codigo):
     """
