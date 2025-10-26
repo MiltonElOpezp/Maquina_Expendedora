@@ -124,15 +124,8 @@ class MaquinaExpendedora:
         pass
     
     def mostrar_dinero_insertado(self):
-        """
-        Muestra la cantidad de dinero insertado actualmente
-        """
-        # TODO: Mostrar el dinero insertado con formato de moneda
-        # 
-        # Ejemplo de implementación:
-        # print(f"Dinero insertado: ${self.dinero_insertado:.2f}")
-        # 
-        # Si has insertado $3.50, mostrará: "Dinero insertado: $3.50"
+ 
+        print(f"Dinero insertado: ${self.dinero_insertado:.2f}")#Solo muestra el dinero insertado con formato de moneda
         pass
 #########################################################################################################   
     def seleccionar_producto(self, codigo):
@@ -179,31 +172,17 @@ class MaquinaExpendedora:
 
    ################################################################################################# 
     def devolver_dinero(self):
-        """
-        Devuelve todo el dinero insertado al usuario
-        
-        Returns:
-            float: Cantidad de dinero devuelto
-        """
-        # TODO: Guardar la cantidad de dinero a devolver
-        # TODO: Mostrar mensaje de devolución
-        # TODO: Resetear el dinero insertado a 0
-        # TODO: Retornar la cantidad devuelta
-        # 
-        # Ejemplo de implementación:
-        # dinero_devuelto = self.dinero_insertado
-        # 
-        # if dinero_devuelto > 0:
-        #     print(f"Devolviendo ${dinero_devuelto:.2f}")
-        #     self.dinero_insertado = 0
-        # else:
-        #     print("No hay dinero para devolver.")
-        # 
-        # return dinero_devuelto
-        # 
-        # Si tenías $5.00 insertados, devuelve $5.00 y queda en $0.00
+      #Esta funcion permite regresarle el dinero al usuario en caso de cancelar la compra
+        Dinero_devuelto = self.dinero_insertado
+        if Dinero_devuelto > 0:
+            print(f"Devolviendo ${Dinero_devuelto:.2f}")
+            self.dinero_insertado = 0
+        else:
+            print("No es necesario dar cambio")
+            
         pass
-    
+        #Codigo Descartado
+   ################################################################################################# 
     def modo_administrador(self):
         """
         Modo especial para administrar la máquina (reponer stock, ver inventario completo)
