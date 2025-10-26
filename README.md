@@ -19,39 +19,39 @@ Maquina_Expendedora/
 
 ### 1. Clase Producto (`producto.py`)
 - ✅ Estructura básica creada con comentarios
-- ⏳ Implementar constructor
-- ⏳ Implementar verificación de stock
-- ⏳ Implementar compra (reducir stock)
+- ✅ Implementar constructor
+- ✅ Implementar verificación de stock
+- ✅ Implementar compra (reducir stock)
 - ⏳ Implementar reposición de stock
-- ⏳ Implementar representación en string
+- ✅ Implementar representación en string
 
 ### 2. Utilidades (`utilidades.py`)
 - ✅ Estructura básica creada con comentarios
-- ⏳ Validar números positivos
-- ⏳ Validar códigos de productos
+- ✅ Validar números positivos
+- ✅ Validar códigos de productos
 - ⏳ Formatear precios
-- ⏳ Limpiar pantalla
-- ⏳ Mostrar título
-- ⏳ Función de pausa
+- ✅ Limpiar pantalla
+- ✅ Mostrar título
+- ✅ Función de pausa
 
 ### 3. Máquina Expendedora (`maquina_expendedora.py`)
 - ✅ Estructura básica creada con comentarios
-- ⏳ Implementar constructor
-- ⏳ Cargar productos iniciales
-- ⏳ Mostrar productos disponibles
-- ⏳ Insertar dinero
-- ⏳ Seleccionar y comprar productos
-- ⏳ Sistema de cambio/vuelto
-- ⏳ Devolver dinero
+- ✅ Implementar constructor
+- ✅ Cargar productos iniciales
+- ✅ Mostrar productos disponibles
+- ✅ Insertar dinero
+- ✅ Seleccionar y comprar productos
+- ✅ Sistema de cambio/vuelto
+- ✅ Devolver dinero
 - ⏳ Modo administrador
 - ⏳ Gestión de inventario
 
 ### 4. Menú e Interfaz (`menu.py`)
 - ✅ Estructura básica creada con comentarios
-- ⏳ Menú principal
-- ⏳ Procesamiento de opciones
+- ✅ Menú principal
+- ✅ Procesamiento de opciones
 - ⏳ Menú de administrador
-- ⏳ Bucle principal del programa
+- ✅ Bucle principal del programa
 
 ## Orden de Implementación Sugerido
 
