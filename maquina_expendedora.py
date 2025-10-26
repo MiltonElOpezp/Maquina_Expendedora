@@ -178,29 +178,14 @@ class MaquinaExpendedora:
     #Codigo Descartado
    ################################################################################################# 
     def devolver_dinero(self):
-        """
-        Devuelve todo el dinero insertado al usuario
-        
-        Returns:
-            float: Cantidad de dinero devuelto
-        """
-        # TODO: Guardar la cantidad de dinero a devolver
-        # TODO: Mostrar mensaje de devolución
-        # TODO: Resetear el dinero insertado a 0
-        # TODO: Retornar la cantidad devuelta
-        # 
-        # Ejemplo de implementación:
-        # dinero_devuelto = self.dinero_insertado
-        # 
-        # if dinero_devuelto > 0:
-        #     print(f"Devolviendo ${dinero_devuelto:.2f}")
-        #     self.dinero_insertado = 0
-        # else:
-        #     print("No hay dinero para devolver.")
-        # 
-        # return dinero_devuelto
-        # 
-        # Si tenías $5.00 insertados, devuelve $5.00 y queda en $0.00
+      #Esta funcion permite regresarle el dinero al usuario en caso de cancelar la compra
+        Dinero_devuelto = self.dinero_insertado
+        if Dinero_devuelto > 0:
+            print(f"Devolviendo ${Dinero_devuelto:.2f}")
+            self.dinero_insertado = 0
+        else:
+            print("No es necesario dar cambio")
+            
         pass
     
     def modo_administrador(self):
