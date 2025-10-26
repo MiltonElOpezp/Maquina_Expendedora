@@ -124,15 +124,8 @@ class MaquinaExpendedora:
         pass
     
     def mostrar_dinero_insertado(self):
-        """
-        Muestra la cantidad de dinero insertado actualmente
-        """
-        # TODO: Mostrar el dinero insertado con formato de moneda
-        # 
-        # Ejemplo de implementación:
-        # print(f"Dinero insertado: ${self.dinero_insertado:.2f}")
-        # 
-        # Si has insertado $3.50, mostrará: "Dinero insertado: $3.50"
+ 
+        print(f"Dinero insertado: ${self.dinero_insertado:.2f}")#Solo muestra el dinero insertado con formato de moneda
         pass
     
     def seleccionar_producto(self, codigo):
