@@ -18,16 +18,7 @@ def mostrar_menu_principal():
     pass
 
 def procesar_opcion_menu(opcion, maquina):
-    """
-    Procesa la opción seleccionada del menú principal
-    
-    Args:
-        opcion (str): Opción seleccionada por el usuario
-        maquina (MaquinaExpendedora): Instancia de la máquina expendedora
-        
-    Returns:
-        bool: True para continuar el programa, False para salir
-    """
+  
     # TODO: Usar if/elif para manejar cada opción:
     
     # Opción 1: Mostrar productos disponibles

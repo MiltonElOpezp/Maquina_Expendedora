@@ -42,13 +42,43 @@ CARACTERÍSTICAS A IMPLEMENTAR:
 """
 
 # Importar el módulo del menú principal
-from menu import ejecutar_maquina_expendedora
+from maquina_expendedora import MaquinaExpendedora #Esto sirve para llamar a las funciones de diferentes archivos siemppre y cuando esten en la misma carpeta
+from menu import mostrar_menu_principal, procesar_opcion_menu
+from utilidades import limpiar_pantalla, pausar, mostar_titulo 
+
 
 # TODO: Descomenta la siguiente línea cuando hayas implementado todas las funciones
 # ejecutar_maquina_expendedora()
+def ejecutar_maquina_expendedora():
+    """
+    Función principal que ejecuta la máquina expendedora
+    """
+    # TODO: Crear una instancia de MaquinaExpendedora
+    maquina = MaquinaExpendedora()
+    
+    
+    # TODO: Cargar los productos iniciales
+    maquina.cargar_productos_iniciales()
+    # TODO: Mostrar el título
+    mostar_titulo()
+    
+    # TODO: Crear un bucle principal que:
+    bandera = True
+    while bandera:
+        limpiar_pantalla()
+        mostrar_menu_principal()
+        try:
+            opcion_str = input("Seleccione una opcion: ")
+            opcion = int(opcion_str)
+            bandera = procesar_opcion_menu(opcion, maquina)
+        except ValueError:
+            print("Por favor ingresa un número válido.")
+            bandera = True
+            if bandera:
+               pausar()
 
-# Mensaje temporal mientras implementas el código
-print("¡Bienvenido al proyecto Máquina Expendedora!")
-print("Lee los comentarios en cada archivo .py para saber qué implementar.")
-print("Cuando termines de programar todas las funciones, descomenta la línea")
-print("'ejecutar_maquina_expendedora()' en este archivo para probar tu programa.")
+if __name__ == "__main__":
+   ejecutar_maquina_expendedora()
+
+
+    
