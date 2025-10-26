@@ -104,7 +104,7 @@ class MaquinaExpendedora:
                  print(producto) #llama automarticamente al metodo __str__() del objeto producto
                  productos_disponibles += 1
  
-                 if productos_disponibles == 0: #Si ningún producto tenía stock(cantidad de productos disponibles), se muestra este mensaje para informar al usuario.
+        if productos_disponibles == 0: #Si ningún producto tenía stock(cantidad de productos disponibles), se muestra este mensaje para informar al usuario.
                      print("No hay productos disponibles en este momento.")
 
         # El bucle for recorre el diccionario:

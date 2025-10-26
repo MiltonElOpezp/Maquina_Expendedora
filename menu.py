@@ -3,7 +3,7 @@ Módulo del menú principal
 Maneja toda la interfaz de usuario de la máquina expendedora
 """
 
-
+from utilidades import validar_numero_positivo, validar_codigo_producto
 from maquina_expendedora import MaquinaExpendedora
 
 def mostrar_menu_principal():
