@@ -7,28 +7,14 @@ from maquina_expendedora import MaquinaExpendedora
 from utilidades import *
 
 def mostrar_menu_principal():
-    """
-    Muestra las opciones del menú principal
-    """
-    # TODO: Mostrar un menú atractivo con las siguientes opciones:
-    # 1. Ver productos disponibles
-    # 2. Insertar dinero
-    # 3. Comprar producto
-    # 4. Ver dinero insertado
-    # 5. Devolver dinero
-    # 6. Modo administrador
-    # 7. Salir
-    # 
-    # Ejemplo de implementación:
-    # print("\n=== MENÚ PRINCIPAL ===")
-    # print("1. Ver productos disponibles")
-    # print("2. Insertar dinero")
-    # print("3. Comprar producto")
-    # print("4. Ver dinero insertado")
-    # print("5. Devolver dinero")
-    # print("6. Modo administrador")
-    # print("7. Salir")
-    # print("=" * 22)
+#Funcion que unicamente muestra un menu al usuario
+    print("\n=== MENÚ PRINCIPAL ===")
+    print("1- Ver productos disponibles")
+    print("2- Insertar dinero ")
+    print("3- Ver dinero insertado")
+    print("4- Devolver dinero")
+    print("5- Salir ")
+    print("==========================================")
     pass
 
 def procesar_opcion_menu(opcion, maquina):
