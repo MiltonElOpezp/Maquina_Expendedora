@@ -56,26 +56,19 @@ def validar_codigo_producto(codigo):
 
 ############################################################################################################
 def formatear_precio(precio):
-    """
-    Formatea un precio para mostrar en pantalla
+
+ #Formatea un precio con el objetivo de mostrarlo con el símbolo de moneda y dos decimales
     
-    Args:
-        precio (float): Precio a formatear
-        
-    Returns:
-        str: Precio formateado con símbolo de moneda
-    """
-    # TODO: Retornar el precio formateado como "$X.XX"
-    # TODO: Asegurar que siempre muestre 2 decimales
-    # 
-    # Ejemplo de implementación:
-    # return f"${precio:.2f}"
-    # 
+    return f"${precio:.2f}"
+  
+    # f-strings: para formatear el número 
+    # :.2f : para asegurar que siempre muestre 2 decimales
+
     # Ejemplos de uso:
     # formatear_precio(1.5) → "$1.50"
     # formatear_precio(2.0) → "$2.00" 
     # formatear_precio(0.75) → "$0.75"
-    pass
+
 ###########################################################################################################
 def limpiar_pantalla():
     """
