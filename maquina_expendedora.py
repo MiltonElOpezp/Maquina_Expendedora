@@ -89,30 +89,28 @@ class MaquinaExpendedora:
 
 ##################################################################################################################
     def mostrar_productos_disponibles(self):
-        """
-        Muestra todos los productos disponibles en la máquina
-        """
-        # TODO: Imprimir un encabezado atractivo
-        # TODO: Iterar sobre todos los productos y mostrar solo los que tienen stock
-        # TODO: Si no hay productos disponibles, mostrar un mensaje apropiado
-        # 
-        # Ejemplo de implementación:
-        # print("=== PRODUCTOS DISPONIBLES ===")
-        # productos_disponibles = 0
-        # 
-        # for codigo, producto in self.productos.items():
-        #     if producto.tiene_stock():
-        #         print(producto)  # Esto llama al método __str__ del producto
-        #         productos_disponibles += 1
-        # 
-        # if productos_disponibles == 0:
-        #     print("No hay productos disponibles en este momento.")
-        # 
+        
+    #Muestra todos los productos disponibles en la máquina
+
+        print("=== PRODUCTOS DISPONIBLES===")
+
+        productos_diisponibles=0
+        
+        for codigo, producto in self.productos.items():
+        #self.productos: es un diccionario("A1")
+        #.items(): permite acceder tanto al codigo como al objeto producto en cada blcle(interaccion)
+
+            if producto.tiene_stock(): #verifica si hay mas unidades(productos)disponibles
+                 print(producto) #llama automarticamente al metodo __str__() del objeto producto
+                 productos_disponibles += 1
+ 
+                 if productos_disponibles == 0: #Si ningún producto tenía stock(cantidad de productos disponibles), se muestra este mensaje para informar al usuario.
+                     print("No hay productos disponibles en este momento.")
+
         # El bucle for recorre el diccionario:
         # - codigo será "A1", "A2", etc.
         # - producto será el objeto Producto correspondiente
-        pass
-    
+    ##################################################################################################################
     def insertar_dinero(self, cantidad):
         """
         Permite al usuario insertar dinero en la máquina
