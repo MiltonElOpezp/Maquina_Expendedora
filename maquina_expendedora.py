@@ -121,12 +121,10 @@ class MaquinaExpendedora:
         else:
             print("La cantidad debe ser mayor que cero.") #Mensaje de error
             return False
-        pass
     
     def mostrar_dinero_insertado(self):
  
         print(f"Dinero insertado: ${self.dinero_insertado:.2f}")#Solo muestra el dinero insertado con formato de moneda
-        pass
 #########################################################################################################   
     def seleccionar_producto(self, codigo):
         
@@ -179,8 +177,6 @@ class MaquinaExpendedora:
             self.dinero_insertado = 0
         else:
             print("No es necesario dar cambio")
-            
-        pass
         #Codigo Descartado
 ################################################################################################# 
     def modo_administrador(self):

@@ -44,7 +44,7 @@ CARACTERÍSTICAS A IMPLEMENTAR:
 # Importar el módulo del menú principal
 from maquina_expendedora import MaquinaExpendedora #Esto sirve para llamar a las funciones de diferentes archivos siemppre y cuando esten en la misma carpeta
 from menu import mostrar_menu_principal, procesar_opcion_menu
-from utilidades import limpiar_pantalla, pausar, mostrar_titulo 
+from utilidades import limpiar_pantalla, pausar, mostrar_titulo
 
 
 # TODO: Descomenta la siguiente línea cuando hayas implementado todas las funciones
@@ -61,7 +61,7 @@ def ejecutar_maquina_expendedora():
     maquina.cargar_productos_iniciales()
     # TODO: Mostrar el título
     mostrar_titulo()
-    
+    pausar()
     # TODO: Crear un bucle principal que:
     bandera = True
     while bandera:

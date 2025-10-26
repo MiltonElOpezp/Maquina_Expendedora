@@ -11,11 +11,11 @@ def mostrar_menu_principal():
     print("\n=== MENÚ PRINCIPAL ===")
     print("1- Ver productos disponibles")
     print("2- Insertar dinero ")
-    print("3- Ver dinero insertado")
-    print("4- Devolver dinero")
-    print("5- Salir ")
+    print("3- Comprar producto ")
+    print("4- Ver dinero insertado ")
+    print("5- Devolver dinero ")
+    print("6- Salir ")
     print("==========================================")
-    pass
 
 def procesar_opcion_menu(opcion, maquina):
   
@@ -37,6 +37,8 @@ def procesar_opcion_menu(opcion, maquina):
         es_valido, cantidad = validar_numero_positivo(cantidad_str) #aqui estamos usando una tupla (usamos dos variables para recibir los retornnos de la funcion en este caso true/false y un numero) Tambien le pasamos el valor a la funcion para que use el dato ingresado
         if es_valido: #Aqui preguntamos si regreso true/false segun si pasa la validacion (recordando que la variable es_valido tiene el valor de true o false)
             maquina.insertar_dinero(cantidad) #LLamamos a la funcion y le pasamos el dato de cantidad ingresada
+        else:
+            print("Por favor ingresa un número válido mayor que 0.")
 
     # Opción 3: Comprar producto
     # TODO: Pedir al usuario que ingrese el código del producto
