@@ -109,16 +109,13 @@ def mostar_titulo():
     
 
 ###########################################################################################################
-
 def pausar():
-    """
-    Pausa la ejecución hasta que el usuario presione Enter
-    """
-    # TODO: Usar input() con un mensaje como "Presiona Enter para continuar..."
-    # 
-    # Ejemplo de implementación:
-    # input("Presiona Enter para continuar...")
-    # 
-    # O con más estilo:
-    # input("\n--- Presiona Enter para continuar ---")
-    pass
+
+ #Pausa la ejecución hasta que el usuario presione Enter
+    #input(): se usara para mostara un mensasje y esperar a que el usuario presione Enter
+
+   input("\n---Presiona Enter para continuar---")
+    # Esta función es útil para dar tiempo al usuario a leer mensajes antes de continuar.
+
+    #\: indica que el siguiente carácter es especial
+    #n: nueva línea (salto de línea)
