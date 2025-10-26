@@ -33,61 +33,58 @@ def procesar_opcion_menu(opcion, maquina):
     # Opción 1: Mostrar productos disponibles
     # TODO: Llamar al método correspondiente de la máquina
     
+    if opcion == 1:
+        maquina.mostrar_productos_disponibles() #El orden para llamar la funcion correspondiente es primero la clase maquina y luego el nombre de la funcion
+ 
+        
+    
     # Opción 2: Insertar dinero
     # TODO: Pedir al usuario que ingrese la cantidad de dinero
     # TODO: Validar que sea un número positivo usando las utilidades
     # TODO: Llamar al método insertar_dinero de la máquina
-    
+    elif opcion == 2:
+        cantidad_str = input("ingresa la cantidad de dinero que desees: $")
+        es_valido, cantidad = validar_numero_positivo(cantidad_str) #aqui estamos usando una tupla (usamos dos variables para recibir los retornnos de la funcion en este caso true/false y un numero) Tambien le pasamos el valor a la funcion para que use el dato ingresado
+        if es_valido: #Aqui preguntamos si regreso true/false segun si pasa la validacion (recordando que la variable es_valido tiene el valor de true o false)
+            maquina.insertar_dinero(cantidad) #LLamamos a la funcion y le pasamos el dato de cantidad ingresada
+
     # Opción 3: Comprar producto
     # TODO: Pedir al usuario que ingrese el código del producto
     # TODO: Validar el código usando las utilidades
     # TODO: Llamar al método seleccionar_producto de la máquina
     
+    elif opcion == 3:
+        codigo = input("Ingresa el codigo del producto que deseas: ")
+        if validar_codigo_producto(codigo):# llamamos a la funcion de utilidades que valida que el codigo tenga una letra y un numero en el orde 1A (la funcion devuelve un true/false)
+            maquina.selecionar_producto(codigo) 
+        else:
+            print("El codigo ingresado es invalido ")
+    
     # Opción 4: Ver dinero insertado
     # TODO: Llamar al método correspondiente de la máquina
     
+    elif opcion == 4:
+        maquina.mostrar_dinero_insertado() #Unicamente muestra cuanto dinero ya se inserto(es para recordar al usuario que cantidad tiene)
+        
     # Opción 5: Devolver dinero
     # TODO: Llamar al método devolver_dinero de la máquina
+    elif opcion == 5:
+        maquina.devolver_dinero() #Devuelve todo el dinero ingresado del usuario simplemente retorna una variable de acumulacion 
     
-    # Opción 6: Modo administrador
+    # Opción : Modo administrador
     # TODO: Llamar al método modo_administrador de la máquina
     
-    # Opción 7: Salir
+    # Opción 6: Salir
     # TODO: Mostrar mensaje de despedida y retornar False
-    
-    # Opción inválida
-    # TODO: Mostrar mensaje de error
-    
-    # TODO: Retornar True para todas las opciones excepto salir
-    # 
-    # Ejemplo de implementación básica:
-    # if opcion == "1":
-    #     maquina.mostrar_productos_disponibles()
-    # elif opcion == "2":
-    #     cantidad_str = input("Ingresa la cantidad de dinero: $")
-    #     es_valido, cantidad = validar_numero_positivo(cantidad_str)
-    #     if es_valido:
-    #         maquina.insertar_dinero(cantidad)
-    #     else:
-    #         print("Cantidad inválida.")
-    # elif opcion == "3":
-    #     codigo = input("Ingresa el código del producto: ")
-    #     if validar_codigo_producto(codigo):
-    #         maquina.seleccionar_producto(codigo)
-    #     else:
-    #         print("Código inválido.")
-    # elif opcion == "4":
-    #     maquina.mostrar_dinero_insertado()
-    # elif opcion == "5":
-    #     maquina.devolver_dinero()
-    # elif opcion == "7":
-    #     print("¡Gracias por usar la máquina expendedora!")
-    #     return False
-    # else:
-    #     print("Opción inválida.")
-    # return True
+    elif opcion == 6:
+        print("Vuelve pronto :) ")
+        return False #este false apaga el bucle y sale del programa
+    else:
+        print("Opcion invalida")
     pass
 
+#           Codigo Descartado
+############################################################################################
 def mostrar_menu_administrador():
     """
     Muestra las opciones del menú de administrador
@@ -113,6 +110,7 @@ def procesar_opcion_administrador(opcion, maquina):
     # TODO: Implementar la lógica para cada opción del administrador
     # TODO: Similar a procesar_opcion_menu pero para las funciones de administrador
     pass
+###############################################################################################
 
 def ejecutar_maquina_expendedora():
     """
