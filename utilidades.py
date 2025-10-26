@@ -1,11 +1,10 @@
-"""
-Módulo de utilidades para validación y formato
-Funciones auxiliares para la máquina expendedora
-"""
+
+#Módulo de utilidades para validación y formato
+#Funciones auxiliares para la máquina expendedora
 
 def validar_numero_positivo(entrada):
 
-## Valida que la entrada sea un número positivo y si no lo es, retorna False
+ ## Valida que la entrada sea un número positivo y si no lo es, retorna False
     
     try:
         numero = float(entrada) # Convierte la entrada a float
@@ -15,43 +14,47 @@ def validar_numero_positivo(entrada):
             return (False, None) # No es positivo, ejjemplo: 0, -3, etc.
     except ValueError:
         return (False, None) # No es un número válido o no hay numero, ejemplo: "abc", etc.
-    
-##########################################################################################################
+ 
+ # Ejemplos de uso:
+ # validar_numero_positivo("2.50") → (True, 2.50)
+ # validar_numero_positivo("-1") → (False, None) 
+ # validar_numero_positivo("abc") → (False, None)
 
+##########################################################################################################
 def validar_codigo_producto(codigo):
-    """
-    Valida que un código de producto tenga el formato correcto
     
-    Args:
-        codigo (str): Código a validar
-        
-    Returns:
-        bool: True si el formato es válido, False caso contrario
-    """
-    # TODO: Verificar que el código no esté vacío
-    # TODO: Verificar que tenga el formato correcto (una letra seguida de un número)
-    # TODO: Ejemplos válidos: A1, B2, C3, etc.
-    # TODO: Retornar True si es válido, False caso contrario
-    # 
-    # Ejemplo de implementación:
-    # if len(codigo) != 2:
-    #     return False
-    # 
-    # primera_letra = codigo[0]  # Primer carácter
-    # segundo_numero = codigo[1]  # Segundo carácter
-    # 
-    # if primera_letra.isalpha() and segundo_numero.isdigit():
-    #     return True
-    # else:
-    #     return False
-    # 
+ ##Valida que un código de producto tenga el formato correcto (una letra + un número)
+    #letra:isalpha()
+    #número:isdigit()
+
+    if len(codigo) != 2: # Verifica que el código tenga exactamente 2 caracteres
+        return False
+    
+    # Ejemplos:
+    #"A1" → tiene 2 caracteres → sigue
+    #"AB1" → tiene 3 caracteres → devuelve False
+    #"A" → tiene 1 carácter → devuelve False
+
+    letra = codigo[0]  # Primer carácter posición 0
+    numero = codigo[1]  # Segundo carácter posición 1
+    
+    #Ejemplos:
+    #codigo = "A1"
+    #letra = "A"    
+    #numero = "1"
+
+    if letra.isalpha() and numero.isdigit(): # Verifica que el primer carácter sea una letra y el segundo un número
+        return True # Formato correcto
+    else:
+        return False # Formato incorrecto
+   
     # Ejemplos de uso:
     # validar_codigo_producto("A1") → True
     # validar_codigo_producto("B2") → True
-    # validar_codigo_producto("12") → False (no tiene letra)
-    # validar_codigo_producto("AB") → False (no tiene número)
-    pass
-
+    # validar_codigo_producto("1A") → False
+    # validar_codigo_producto("AB") → False
+    
+############################################################################################################
 def formatear_precio(precio):
     """
     Formatea un precio para mostrar en pantalla
@@ -73,7 +76,7 @@ def formatear_precio(precio):
     # formatear_precio(2.0) → "$2.00" 
     # formatear_precio(0.75) → "$0.75"
     pass
-
+###########################################################################################################
 def limpiar_pantalla():
     """
     Limpia la pantalla de la consola
