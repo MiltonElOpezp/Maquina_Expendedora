@@ -19,35 +19,75 @@ class MaquinaExpendedora:
 
 ##########################################################################################################   
     def cargar_productos_iniciales(self):
-        """
-        Carga los productos iniciales de la máquina
-        Puedes modificar esta función para agregar los productos que desees
-        """
-        # TODO: Crear varios productos usando la clase Producto
-        # Ejemplos sugeridos:
-        # - A1: Coca Cola, $1.50, 10 unidades
-        # - A2: Pepsi, $1.50, 8 unidades
-        # - B1: Papas Lays, $2.00, 15 unidades
-        # - B2: Doritos, $2.25, 12 unidades
-        # - C1: Chocolate Kit Kat, $1.75, 6 unidades
-        # - C2: Chicles Trident, $0.75, 20 unidades
+
+        #Carga los productos iniciales de la máquina
+        #Se puede modificar esta función para agregar los productos que se desee
         
-        # TODO: Agregar cada producto al diccionario usando su código como clave
-        # 
-        # Ejemplo de implementación:
-        # coca = Producto("A1", "Coca Cola", 1.50, 10)
-        # pepsi = Producto("A2", "Pepsi", 1.50, 8)
-        # papas = Producto("B1", "Papas Lays", 2.00, 15)
-        # 
-        # self.productos["A1"] = coca
-        # self.productos["A2"] = pepsi  
-        # self.productos["B1"] = papas
-        # 
-        # Otra forma más corta:
-        # self.productos["A1"] = Producto("A1", "Coca Cola", 1.50, 10)
-        # self.productos["A2"] = Producto("A2", "Pepsi", 1.50, 8)
-        pass
-    
+        #LUGAR:A
+        #FILAS:1 AL 5
+        self.productos["A1"] = Producto("A1", "Base líquida", 300, 6)
+        self.productos["A2"] = Producto("A2", "Base en crema", 350, 6)
+        self.productos["A3"] = Producto("A3", "Polvo compacto", 200, 6)
+        self.productos["A4"] = Producto("A4", "Polvo suelto", 250, 6)
+        self.productos["A5"] = Producto("A5","Corrector", 150, 6)
+
+        #LUGAR:B
+        #FILAS:1 AL 5
+        self.productos["B1"] = Producto("B1", "Iluminador", 200, 6)
+        self.productos["B2"] = Producto("B2", "Colorete (blush)", 150,6)
+        self.productos["B3"] =Producto("B3", "Bronceador", 200, 6)
+        self.productos["B4"] = Producto("B4", "Sombra de ojos", 120, 6)
+        self.productos["B5"] = Producto("B5", "Lápiz de ojos", 80, 6)
+
+        #LUGAR:C
+        #FILAS:1 AL 5
+        self.productos["C1"] = Producto("C1", "Delineador líquido", 95, 6)
+        self.productos["C2"] = Producto("C2", "Delineador en gel", 100, 6)
+        self.productos["C3"] = Producto("C3", "Máscara de pestañas", 150, 6)
+        self.productos["C4"] = Producto("C4", "Pestañas postizas", 75, 6)
+        self.productos["C5"] = Producto("C5", "Labial en barra", 90, 6)
+
+        #LUGAR:D
+        #FILAS:1 AL 5
+        self.productos["D1"] = Producto("D1", "Labial líquido", 95, 6)
+        self.productos["D2"] = Producto("D2", "Brillo labial", 85, 6)
+        self.productos["D3"] = Producto("D3", "Perfilador de labios", 70, 6)
+        self.productos["D4"] = Producto("D4", "Spray fijador", 110, 6)
+        self.productos["D5"] = Producto("D5", "Prebase para ojos", 105, 6)
+
+        #LUGAR:E
+        #FILAS:1 AL 5
+        self.productos["E1"] = Producto("E1", "Prebase para rostro", 130, 6)
+        self.productos["E2"] = Producto("E2", "Tinte para mejillas", 115, 6)
+        self.productos["E3"] = Producto("E3", "Sombra de cejas", 90.0, 6)
+        self.productos["E4"] = Producto("E4", "Gel para cejas", 95, 6)
+        self.productos["E5"] = Producto("E5", "Lápiz para cejas", 85, 6)
+
+        #LUGAR:F
+        #FILAS:1 AL 5
+        self.productos["F1"] = Producto("F1", "Paleta de sombras", 180, 6)
+        self.productos["F2"] = Producto("F2", "Paleta de iluminadores", 170, 6)
+        self.productos["F3"] = Producto("F3", "Paleta de rubores", 160, 6)
+        self.productos["F4"] = Producto("F4", "Tónico facial", 140, 6)
+        self.productos["F5"] = Producto("F5", "Aceite facial", 150, 6)
+
+        #LUGAR:G
+        #FILAS:1 AL 5
+        self.productos["G1"] = Producto("G1", "Crema hidratante con color", 135, 6)
+        self.productos["G2"] = Producto("G2", "Polvo matificante", 125, 6)
+        self.productos["G3"] = Producto("G3", "Maquillaje mineral", 145, 6)
+        self.productos["G4"] = Producto("G4", "Esmalte de uñas", 60, 6)
+        self.productos["G5"] = Producto("G5", "Desmaquillante", 100, 6)
+
+        #LUGAR:H
+        #FILAS:1 AL 5
+        self.productos["H1"] = Producto("H1", "Toallitas desmaquillantes", 75, 6)
+        self.productos["H2"] = Producto("H2", "Pinceles de maquillaje", 180, 6)
+        self.productos["H3"] = Producto("H3", "Esponjas de maquillaje", 90, 6)
+        self.productos["H4"] = Producto("H4", "Kit de contorno", 190, 6)
+        self.productos["H5"] = Producto("H5", "Pestañas postizas magnéticas", 120, 6)
+
+##################################################################################################################
     def mostrar_productos_disponibles(self):
         """
         Muestra todos los productos disponibles en la máquina
