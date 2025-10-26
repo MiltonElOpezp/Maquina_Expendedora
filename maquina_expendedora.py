@@ -110,7 +110,7 @@ class MaquinaExpendedora:
         # El bucle for recorre el diccionario:
         # - codigo será "A1", "A2", etc.
         # - producto será el objeto Producto correspondiente
-    ##################################################################################################################
+##################################################################################################################
     def insertar_dinero(self, cantidad):
        #Funcion que valida y permite al usuario insertar dinero en la maquina expendedora
         if cantidad > 0: #Verifica que la cantidad sea mayor a 0
@@ -170,7 +170,7 @@ class MaquinaExpendedora:
         print("Hubo un error al realizar la compra")
         return False
 
-   ################################################################################################# 
+################################################################################################# 
     def devolver_dinero(self):
       #Esta funcion permite regresarle el dinero al usuario en caso de cancelar la compra
         Dinero_devuelto = self.dinero_insertado
@@ -182,7 +182,7 @@ class MaquinaExpendedora:
             
         pass
         #Codigo Descartado
-   ################################################################################################# 
+################################################################################################# 
     def modo_administrador(self):
         """
         Modo especial para administrar la máquina (reponer stock, ver inventario completo)
