@@ -2,6 +2,14 @@
 #Módulo de utilidades para validación y formato
 #Funciones auxiliares para la máquina expendedora
 ##################################################################################################
+#Utiliza 6 funciones:
+# validar_numero_positivo(entrada)  
+# validar_codigo_producto(codigo)
+# formatear_precio(precio)
+# limpiar_pantalla()
+# mostar_titulo()
+# pausar()
+##################################################################################################
 def validar_numero_positivo(entrada):
 
  ## Valida que la entrada sea un número positivo y si no lo es, retorna False
@@ -86,8 +94,22 @@ def limpiar_pantalla():
 
  #Esta función borra todo lo que hay en la consola, como si empezaras de nuevo.
  #Esto es util  para que la pantalla no se llene de texto y sea más fácil de leer antes de mostar un nuevo menu o mensaje.
-
 ###########################################################################################################    
+def mostar_titulo():
+
+ #Muestra el título de la máquina expendedora en pantalla.
+    
+   #print(): para mostrar lineas decorativas en la pantalla
+   #= ╔, ║, ╚, ╝,╗: caracter para decorar (fueron buscacados en internet)
+
+    print("╔" + "═" * 38 + "╗")
+    print("║     MÁQUINA EXPENDEDORA    ║")
+    print("║      ¡Bienvenido!          ║")
+    print("╚" + " " * 38 + "╝")
+    
+
+###########################################################################################################
+
 def pausar():
     """
     Pausa la ejecución hasta que el usuario presione Enter
