@@ -112,31 +112,15 @@ class MaquinaExpendedora:
         # - producto será el objeto Producto correspondiente
     ##################################################################################################################
     def insertar_dinero(self, cantidad):
-        """
-        Permite al usuario insertar dinero en la máquina
-        
-        Args:
-            cantidad (float): Cantidad de dinero a insertar
-            
-        Returns:
-            bool: True si el dinero se insertó correctamente, False caso contrario
-        """
-        # TODO: Validar que la cantidad sea positiva
-        # TODO: Agregar la cantidad al dinero total insertado
-        # TODO: Mostrar mensaje de confirmación
-        # TODO: Retornar True si fue exitoso, False caso contrario
-        # 
-        # Ejemplo de implementación:
-        # if cantidad > 0:
-        #     self.dinero_insertado += cantidad
-        #     print(f"Has insertado ${cantidad:.2f}")
-        #     print(f"Total insertado: ${self.dinero_insertado:.2f}")
-        #     return True
-        # else:
-        #     print("La cantidad debe ser mayor que cero.")
-        #     return False
-        # 
-        # Si insertas $2.00 y ya tenías $1.50, el total será $3.50
+       #Funcion que valida y permite al usuario insertar dinero en la maquina expendedora
+        if cantidad > 0: #Verifica que la cantidad sea mayor a 0
+            self.dinero_insertado += cantidad #Acumulador de dinero insertado
+            print(f"Has insertado ${cantidad:.2f}")#Muestra el dinero insertado por ultima vez
+            print(f"Total insertado: ${self.dinero_insertado:.2f}") #Muestra todo el dinero insertado
+            return True
+        else:
+            print("La cantidad debe ser mayor que cero.") #Mensaje de error
+            return False
         pass
     
     def mostrar_dinero_insertado(self):
@@ -198,7 +182,8 @@ class MaquinaExpendedora:
         #     self.dinero_insertado = 0
         #     return True
         pass
-    
+    #Codigo Descartado
+   ################################################################################################# 
     def devolver_dinero(self):
         """
         Devuelve todo el dinero insertado al usuario
