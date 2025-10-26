@@ -84,6 +84,7 @@ def limpiar_pantalla():
     else:  # Linux/Mac
         os.system('clear')
 
+ #Esta función borra todo lo que hay en la consola, como si empezaras de nuevo.
  #Esto es util  para que la pantalla no se llene de texto y sea más fácil de leer antes de mostar un nuevo menu o mensaje.
 
 ###########################################################################################################    
