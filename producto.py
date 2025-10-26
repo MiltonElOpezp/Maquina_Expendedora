@@ -43,7 +43,6 @@ class Producto: #Esta clase sirve para crear los productos que van a estar en la
         pass
     #################################################################################
     def __str__(self):
-       def __str__(self):  
         return f"[{self.codigo}] {self.nombre} - ${self.precio:.2f} (Stock: {self.cantidad})" #Sirve para mostrar en pantalla los productos con su codigo, nombre, precio y cantidad
          # Ejemplo: "[A1] Coca Cola - $1.50 (Stock: 10)"
         pass
