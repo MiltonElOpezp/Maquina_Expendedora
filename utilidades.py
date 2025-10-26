@@ -71,51 +71,22 @@ def formatear_precio(precio):
 
 ###########################################################################################################
 def limpiar_pantalla():
-    """
-    Limpia la pantalla de la consola
-    """
-    # TODO: Importar os
-    # TODO: Usar os.system('cls') para Windows o os.system('clear') para Linux/Mac
-    # TODO: Alternativamente, imprimir varias líneas vacías
-    # 
-    # Ejemplo de implementación:
-    # import os
-    # os.system('cls')  # Para Windows
-    # 
-    # O si quieres que funcione en cualquier sistema:
-    # import os
-    # if os.name == 'nt':  # Windows
-    #     os.system('cls')
-    # else:  # Linux/Mac
-    #     os.system('clear')
-    # 
-    # Alternativa simple sin importar nada:
-    # print("\n" * 50)  # Imprime 50 líneas vacías
-    pass
+    
+    #Limpia la pantalla de la consola como si fuera una nueva 
+    
+    # OS: para ejecutar comandos del sistema
+    # cls: comando para limpiar pantalla en Windows
+    # clear: comando para limpiar pantalla en Linux/Mac
 
-def mostrar_titulo():
-    """
-    Muestra un título atractivo para la máquina expendedora
-    """
-    # TODO: Crear un título ASCII art o con caracteres especiales
-    # TODO: Ejemplo:
-    # ================================
-    #     MÁQUINA EXPENDEDORA 3000
-    # ================================
-    # 
-    # Ejemplo de implementación:
-    # print("=" * 40)
-    # print("     MÁQUINA EXPENDEDORA 3000")
-    # print("=" * 40)
-    # print()  # Línea vacía
-    # 
-    # O más elaborado:
-    # print("╔" + "═" * 38 + "╗")
-    # print("║        MÁQUINA EXPENDEDORA         ║")
-    # print("║              3000                  ║")
-    # print("╚" + "═" * 38 + "╝")
-    pass
+    import os
+    if os.name == 'nt':  # Windows
+        os.system('cls')
+    else:  # Linux/Mac
+        os.system('clear')
 
+ #Esto es util  para que la pantalla no se llene de texto y sea más fácil de leer antes de mostar un nuevo menu o mensaje.
+
+###########################################################################################################    
 def pausar():
     """
     Pausa la ejecución hasta que el usuario presione Enter
