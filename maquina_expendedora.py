@@ -1,27 +1,23 @@
-"""
-Módulo para la clase MaquinaExpendedora
-Maneja toda la lógica de la máquina expendedora
-"""
 
-from producto import Producto
+#Módulo para la clase MaquinaExpendedora
+#Maneja toda la lógica de la máquina expendedora
+###########################################################################################################
+
+
+from producto import Producto # esto importa producto desde otro archivo llamado producto.py
 
 class MaquinaExpendedora:
     def __init__(self):
-        """
-        Inicializa la máquina expendedora
-        """
-        # TODO: Crear un diccionario para almacenar los productos
-        # La clave será el código del producto y el valor será el objeto Producto
-        # TODO: Inicializar el dinero insertado en 0
-        # 
-        # Ejemplo:
-        # self.productos = {}  # Diccionario vacío para guardar productos
-        # self.dinero_insertado = 0.0  # Dinero que el usuario ha puesto
-        # 
-        # El diccionario se verá así después de cargar productos:
-        # {"A1": objeto_producto_coca, "B1": objeto_producto_papas, ...}
-        pass
+
+    #class(clase): podra guardar productos, recibir cambio y vender productos( mas adelante)
+    #init: es el constructor de la clase, su funcion es inicializar los atrubutos(variables internas) 
+
+ #Inicializa la máquina expendedora
     
+        self.productos ={} #diccionario vacio llamado productos (guarda todos los productos disponibles)
+        self.dinero_insertado = 0.0  #comienza desde cero por que nadie ha ingresado nada aun
+
+##########################################################################################################   
     def cargar_productos_iniciales(self):
         """
         Carga los productos iniciales de la máquina
