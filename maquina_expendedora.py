@@ -94,7 +94,7 @@ class MaquinaExpendedora:
 
         print("=== PRODUCTOS DISPONIBLES===")
 
-        productos_diisponibles=0
+        productos_disponibles=0
         
         for codigo, producto in self.productos.items():
         #self.productos: es un diccionario("A1")
