@@ -134,55 +134,49 @@ class MaquinaExpendedora:
         # 
         # Si has insertado $3.50, mostrará: "Dinero insertado: $3.50"
         pass
-    
+#########################################################################################################   
     def seleccionar_producto(self, codigo):
-        """
-        Permite al usuario seleccionar un producto para comprar
         
-        Args:
-            codigo (str): Código del producto seleccionado
+        #Permite al usuario seleccionar un producto para comprar
+        
+        #Args:
+            #codigo (str): Código del producto seleccionado
             
-        Returns:
-            bool: True si la compra fue exitosa, False caso contrario
-        """
-        # TODO: Convertir el código a mayúsculas para evitar errores
-        # TODO: Verificar si el producto existe en el diccionario
-        # TODO: Verificar si el producto tiene stock
-        # TODO: Verificar si el dinero insertado es suficiente para comprar el producto
-        # TODO: Si todo está correcto:
-        #       - Realizar la compra del producto
-        #       - Calcular el cambio (dinero insertado - precio del producto)
-        #       - Mostrar mensaje de compra exitosa con el producto y el cambio
-        #       - Resetear el dinero insertado a 0
-        #       - Retornar True
-        # TODO: Si hay algún error, mostrar mensaje apropiado y retornar False
-        # 
-        # Ejemplo de implementación:
-        # codigo = codigo.upper()  # Convierte "a1" en "A1"
-        # 
-        # if codigo not in self.productos:
-        #     print("Producto no encontrado.")
-        #     return False
-        # 
-        # producto = self.productos[codigo]
-        # 
-        # if not producto.tiene_stock():
-        #     print("Producto agotado.")
-        #     return False
-        # 
-        # if self.dinero_insertado < producto.precio:
-        #     print(f"Dinero insuficiente. Necesitas ${producto.precio:.2f}")
-        #     return False
-        # 
-        # # Todo está bien, realizar compra
-        # if producto.comprar():
-        #     cambio = self.dinero_insertado - producto.precio
-        #     print(f"¡Compra exitosa! {producto.nombre}")
-        #     print(f"Tu cambio: ${cambio:.2f}")
-        #     self.dinero_insertado = 0
-        #     return True
-        pass
-    #Codigo Descartado
+        #Returns:
+            #bool: True si la compra fue exitosa, False caso contrario
+        
+        #se convierte el codigo a mayusculas para evitar errores por escritura
+        codigo = codigo.upper()  # Convierte "a1" en "A1"
+        
+        #se verifica si el codigo existe en el diccionario de productos
+        if codigo not in self.productos:
+             print("Producto no encontrado.")
+             return False
+        
+        #se obtiene el producto correspondiente al codigo
+        producto = self.productos[codigo] #aqui se accede al objeto producto que corresponde al codigo
+    
+
+        if not producto.tiene_stock(): #si no hay producto disponible se muestra el mensaje y se cancela la compra
+             print("Producto agotado.")
+             return False
+        
+        if self.dinero_insertado < producto.precio: #compara el dinero que el usuario ha insertado con el precio del producto
+             print(f"Dinero insuficiente. Necesitas ${producto.precio:.2f}") #si no alcanza, se mustra cuanto falta y se cancela la compra
+             return False
+        
+        if producto.comprar(): #debería restar 1 unidad al stock.
+             cambio = self.dinero_insertado - producto.precio #calcula cuanto dinero sobra despues de pagar
+             print(f"¡Compra exitosa! {producto.nombre}")
+             print(f"Tu cambio: ${cambio:.2f}") 
+             #Informa al usuario que la compra fue exitosa.
+             #muestra el nombre del producto y el cambio que se le devuelve
+             self.dinero_insertado = 0
+             return True
+        #Si por alguna razón el método comprar() no funciona, se muestra un mensaje y se retorna False.
+        print("Hubo un error al realizar la compra")
+        return False
+
    ################################################################################################# 
     def devolver_dinero(self):
         """
