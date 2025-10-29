@@ -163,7 +163,7 @@ class MaquinaExpendedora:
              print(f"Tu cambio: ${cambio:.2f}") 
              #Informa al usuario que la compra fue exitosa.
              #muestra el nombre del producto y el cambio que se le devuelve
-             self.dinero_insertado = 0
+             self.dinero_insertado = cambio
              return True
         #Si por alguna razón el método comprar() no funciona, se muestra un mensaje y se retorna False.
         print("Hubo un error al realizar la compra")

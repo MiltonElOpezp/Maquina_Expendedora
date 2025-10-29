@@ -51,6 +51,7 @@ def procesar_opcion_menu(opcion, maquina):
             maquina.seleccionar_producto(codigo) 
         else:
             print("El codigo ingresado es invalido ")
+            
     
     # Opción 4: Ver dinero insertado
     # TODO: Llamar al método correspondiente de la máquina
