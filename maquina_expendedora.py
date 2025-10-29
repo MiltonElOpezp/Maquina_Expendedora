@@ -110,6 +110,7 @@ class MaquinaExpendedora:
         # El bucle for recorre el diccionario:
         # - codigo será "A1", "A2", etc.
         # - producto será el objeto Producto correspondiente
+
 ##################################################################################################################
     def insertar_dinero(self, cantidad):
        #Funcion que valida y permite al usuario insertar dinero en la maquina expendedora
