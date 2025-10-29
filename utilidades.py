@@ -1,3 +1,4 @@
+
 #Funciones auxiliares para la máquina expendedora
 ##################################################################################################
 #Utiliza 6 funciones:
@@ -5,11 +6,13 @@
 # validar_codigo_producto(codigo)
 # formatear_precio(precio)
 # limpiar_pantalla()
-# mostrar_titulo()
+# mostar_titulo()
 # pausar()
 ##################################################################################################
 def validar_numero_positivo(entrada):
-    """Valida que la entrada sea un número positivo y si no lo es, retorna False"""
+
+ ## Valida que la entrada sea un número positivo y si no lo es, retorna False
+    
     try:
         numero = float(entrada) # Convierte la entrada a float
         if numero > 0: # Verifica si el número es positivo, ejemplo: 1, 2.5, etc.
@@ -19,14 +22,15 @@ def validar_numero_positivo(entrada):
     except ValueError:
         return (False, None) # No es un número válido o no hay numero, ejemplo: "abc", etc.
  
-    # Ejemplos de uso:
-    # validar_numero_positivo("2.50") → (True, 2.50)
-    # validar_numero_positivo("-1") → (False, None) 
-    # validar_numero_positivo("abc") → (False, None)
+ # Ejemplos de uso:
+ # validar_numero_positivo("2.50") → (True, 2.50)
+ # validar_numero_positivo("-1") → (False, None) 
+ # validar_numero_positivo("abc") → (False, None)
 
 ##########################################################################################################
 def validar_codigo_producto(codigo):
-    """Valida que un código de producto tenga el formato correcto (una letra + un número)"""
+    
+ ##Valida que un código de producto tenga el formato correcto (una letra + un número)
     #letra:isalpha()
     #número:isdigit()
 
@@ -59,7 +63,9 @@ def validar_codigo_producto(codigo):
 
 ############################################################################################################
 def formatear_precio(precio):
-    """Formatea un precio con el objetivo de mostrarlo con el símbolo de moneda y dos decimales"""
+
+ #Formatea un precio con el objetivo de mostrarlo con el símbolo de moneda y dos decimales
+    
     return f"${precio:.2f}"
   
     # f-strings: para formatear el número 
@@ -72,7 +78,9 @@ def formatear_precio(precio):
 
 ###########################################################################################################
 def limpiar_pantalla():
-    """Limpia la pantalla de la consola como si fuera una nueva"""
+    
+    #Limpia la pantalla de la consola como si fuera una nueva 
+    
     # OS: para ejecutar comandos del sistema
     # cls: comando para limpiar pantalla en Windows
     # clear: comando para limpiar pantalla en Linux/Mac
@@ -83,25 +91,29 @@ def limpiar_pantalla():
     else:  # Linux/Mac
         os.system('clear')
 
-    #Esta función borra todo lo que hay en la consola, como si empezaras de nuevo.
-    #Esto es util  para que la pantalla no se llene de texto y sea más fácil de leer antes de mostar un nuevo menu o mensaje.
-
+ #Esta función borra todo lo que hay en la consola, como si empezaras de nuevo.
+ #Esto es util  para que la pantalla no se llene de texto y sea más fácil de leer antes de mostar un nuevo menu o mensaje.
 ###########################################################################################################    
 def mostrar_titulo():
-    """Muestra el título de la máquina expendedora en pantalla."""
-    #print(): para mostrar lineas decorativas en la pantalla
-    #= ╔, ║, ╚, ╝,╗: caracter para decorar (fueron buscacados en internet)
+
+ #Muestra el título de la máquina expendedora en pantalla.
+    
+   #print(): para mostrar lineas decorativas en la pantalla
+   #= ╔, ║, ╚, ╝,╗: caracter para decorar (fueron buscacados en internet)
 
     print("╔" + "═" * 38 + "╗")
     print("║     MÁQUINA EXPENDEDORA DE MAQUILLAJE    ║")
     print("║              ¡Bienvenido!                ║")
     print("╚" + "═" * 38 + "╝")
+    
 
 ###########################################################################################################
 def pausar():
-    """Pausa la ejecución hasta que el usuario presione Enter"""
+
+ #Pausa la ejecución hasta que el usuario presione Enter
     #input(): se usara para mostara un mensasje y esperar a que el usuario presione Enter
-    input("\n---Presiona Enter para continuar---")
+
+   input("\n---Presiona Enter para continuar---")
     # Esta función es útil para dar tiempo al usuario a leer mensajes antes de continuar.
 
     #\: indica que el siguiente carácter es especial

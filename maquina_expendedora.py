@@ -154,7 +154,9 @@ class MaquinaExpendedora:
              return False
         
         if self.dinero_insertado < producto.precio: #compara el dinero que el usuario ha insertado con el precio del producto
-             print(f"Dinero insuficiente. Necesitas ${producto.precio:.2f}") #si no alcanza, se mustra cuanto falta y se cancela la compra
+             diferencia = producto.precio - self.dinero_insertado
+             print(f"Dinero insuficiente. Necesitas ${diferencia:.2f}") #si no alcanza, se mustra cuanto falta y se cancela la compra
+             print(f"Precio del producto: ${producto.precio:.2f}")
              return False
         
         if producto.comprar(): #debería restar 1 unidad al stock.
@@ -163,7 +165,7 @@ class MaquinaExpendedora:
              print(f"Tu cambio: ${cambio:.2f}") 
              #Informa al usuario que la compra fue exitosa.
              #muestra el nombre del producto y el cambio que se le devuelve
-             self.dinero_insertado = cambio
+             self.dinero_insertado = 0
              return True
         #Si por alguna razón el método comprar() no funciona, se muestra un mensaje y se retorna False.
         print("Hubo un error al realizar la compra")
